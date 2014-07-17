@@ -3,7 +3,7 @@
 
 This Migrationtool can be used to migrate the database of your
 FusionInvoice v1.x installation to InvoicePlane.
-Please follow the instructions at the [wiki](https://github.com/InvoicePlane/InvoicePlane/wiki/Moving-from-FI).
+Please follow the instructions at the [wiki](https://github.com/InvoicePlane/InvoicePlane/wiki/Migrate-from-FI).
 
 ---
 
