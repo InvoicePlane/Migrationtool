@@ -10,4 +10,4 @@
 
 const TOOL_VERSION = '0.1';
 
-const DEBUG = true;
+const DEBUG = false;
