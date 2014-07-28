@@ -9,6 +9,8 @@
 */
 session_start();
 
+require_once('../config.php');
+
 if ( isset($_SESSION['connection']) ) {
 
     $connection = mysqli_connect(
@@ -160,7 +162,7 @@ if ( isset($_SESSION['connection']) ) {
 } else { ?>
 
     <p class="alert alert-danger">
-        <span class="label label-danger">Error!</span> Please re-configure the database credentials <a href="/step/config">here</a>!
+        <span class="label label-danger">Error!</span> Please re-configure the database credentials <a href="/<?php echo SUBDIR ?>step/config">here</a>!
     </p>
 
 <?php } ?>

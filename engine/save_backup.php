@@ -7,6 +7,8 @@
 */
 session_start();
 
+require_once('../config.php');
+
 function backup_tables($host,$user,$pass,$name,$tables = '*')
 {
 

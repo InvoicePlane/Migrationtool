@@ -7,6 +7,8 @@
 */
 session_start();
 
+require_once('../config.php');
+
 // Check if all fields have been entered
 if (
     isset( $_POST['database_name'] ) &&
@@ -40,7 +42,7 @@ if (
             'message' => 'Database connection valid.'
         );
 
-        header('location: /step/backup');
+        header('location: /'. SUBDIR .'step/backup');
         exit;
 
 
@@ -52,7 +54,7 @@ if (
             'message' => 'The entered credentials are not correct. Please try again.'
         );
 
-        header('location: /step/config');
+        header('location: /'. SUBDIR .'step/config');
         exit;
 
     }
@@ -65,7 +67,7 @@ if (
         'message' => 'Please enter all fields.'
     );
 
-    header('location: /step/config');
+    header('location: /'. SUBDIR .'step/config');
     exit;
 
 }

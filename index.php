@@ -22,18 +22,15 @@ require_once('engine.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>InvoicePlane DB Conversion Tool</title>
 
-    <!-- Bootstrap -->
-    <link href="/assets/default/css/style.css" rel="stylesheet">
+    <link href="/<?php echo SUBDIR ?>assets/default/css/style.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="/assets/default/js/libs/jquery-1.11.1.min.js"></script>
-    <script src="/assets/default/js/libs/bootstrap-3.2.0.min.js"></script>
+    <script src="/<?php echo SUBDIR ?>assets/default/js/libs/jquery-1.11.1.min.js"></script>
+    <script src="/<?php echo SUBDIR ?>assets/default/js/libs/bootstrap-3.2.0.min.js"></script>
 
 </head>
 <body>
@@ -65,7 +62,7 @@ require_once('engine.php');
 
                     <?php
                     // Determine which content should be loaded
-                    if ( $path[1] == 'step' && !empty($path[2])  ) {
+                    if ( !empty($path[1]) && $path[1] == 'step' && !empty($path[2])  ) {
 
                         switch ($path[2]) {
                             case 'config':
@@ -110,7 +107,7 @@ require_once('engine.php');
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-xs-6">
-                            <a href="/"><i class="fa fa-home"></i></a>
+                            <a href="/<?php echo SUBDIR ?>"><i class="fa fa-home"></i></a>
                         </div>
                         <div class="col-xs-6 text-right text-muted">
                             <?php echo 'v'.TOOL_VERSION; ?>
@@ -135,6 +132,7 @@ require_once('engine.php');
     <?php
     if ( DEBUG === true ) {
         echo '<pre>';
+        print_r($path);
         print_r($_SESSION);
         echo '<pre>';
     }

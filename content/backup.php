@@ -9,13 +9,13 @@
 
 <p>We recommend saving a backup of the database. If you don't want to press continue.</p>
 
-<a href="/engine/save_backup.php" id="btn_backup" class="btn btn-lg btn-warning">
+<a href="/<?php echo SUBDIR ?>engine/save_backup.php" id="btn_backup" class="btn btn-lg btn-warning">
     <i class="fa fa-history"></i>&nbsp; Save Backup
 </a>
 
 <br/><br/>
 
-<a href="/step/conversion" id="btn_continue" class="btn btn-lg btn-default">
+<a href="/<?php echo SUBDIR ?>step/conversion" id="btn_continue" class="btn btn-lg btn-default">
     <i class="fa fa-angle-right"></i>&nbsp; Continue
 </a>
 
