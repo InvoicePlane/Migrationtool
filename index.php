@@ -60,6 +60,12 @@ require_once('engine.php');
 
                     ?>
 
+                    <noscript>
+                        <div class="alert alert-danger">
+                            Please enable JavaScript to ensure that the tool is working properly.
+                        </div>
+                    </noscript>
+
                     <?php
                     // Determine which content should be loaded
                     if ( !empty($path[1]) && $path[1] == 'step' && !empty($path[2])  ) {
