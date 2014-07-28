@@ -8,7 +8,7 @@
 
 // Get the request path
 $requesturi = explode('?' , $_SERVER['REQUEST_URI']);
-$requesturi = mysql_real_escape_string($requesturi[0]);
+$requesturi = $requesturi[0];
 $path       = explode('/' , $requesturi);
 
 // Cut off the defined subdir from the config
